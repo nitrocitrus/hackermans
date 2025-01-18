@@ -1,0 +1,141 @@
+[gd_scene load_steps=3 format=3 uid="uid://borvsngo308aa"]
+
+[ext_resource type="Texture2D" uid="uid://buwss4cq4vxkx" path="res://email.jpg" id="1_hvwv0"]
+[ext_resource type="Texture2D" uid="uid://cetj1l6i5s2p6" path="res://globe.jpg" id="2_skgvg"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="."]
+clip_contents = false
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 40.0
+offset_bottom = 40.0
+scroll_horizontal = 5
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer2"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 2
+color = Color(0.237539, 0.237539, 0.237539, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ScrollContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer2/VBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(250, 25)
+layout_mode = 2
+alignment = 1
+
+[node name="Window" type="Window" parent="ScrollContainer2/VBoxContainer/ScrollContainer/VBoxContainer"]
+transparent_bg = true
+mode = 2
+title = "TERMINUS"
+initial_position = 1
+size = Vector2i(750, 500)
+
+[node name="Panel" type="Panel" parent="ScrollContainer2/VBoxContainer/ScrollContainer/VBoxContainer/Window"]
+offset_right = 749.0
+offset_bottom = 501.0
+metadata/_edit_group_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer2/VBoxContainer/ScrollContainer/VBoxContainer/Window/Panel"]
+layout_mode = 0
+offset_right = 749.0
+offset_bottom = 424.0
+
+[node name="TerminalOutput" type="RichTextLabel" parent="ScrollContainer2/VBoxContainer/ScrollContainer/VBoxContainer/Window/Panel"]
+layout_mode = 0
+offset_right = 234.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = ">> Welcome"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="TextEdit" type="TextEdit" parent="ScrollContainer2/VBoxContainer/ScrollContainer/VBoxContainer/Window/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 469.0
+offset_right = 748.0
+offset_bottom = 501.0
+placeholder_text = "Enter Your Command:"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer2/VBoxContainer/ScrollContainer/VBoxContainer/Window/Panel"]
+layout_mode = 0
+offset_top = 415.0
+offset_right = 222.0
+offset_bottom = 455.0
+bbcode_enabled = true
+text = "ERROR"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1900, 100)
+offset_left = 4.0
+offset_top = 973.0
+offset_right = 1910.0
+offset_bottom = 1073.0
+color = Color(0.283696, 0.479797, 0.794734, 0.509804)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1500.0
+offset_top = 728.0
+offset_right = 1642.0
+offset_bottom = 919.0
+
+[node name="Icon" type="Button" parent="Control"]
+offset_top = 4.0
+offset_right = 1032.0
+offset_bottom = 1082.0
+scale = Vector2(0.125, 0.125)
+size_flags_horizontal = 4
+text = " "
+icon = ExtResource("2_skgvg")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Browser" type="RichTextLabel" parent="Control"]
+offset_left = 14.0
+offset_top = 132.0
+offset_right = 114.0
+offset_bottom = 166.0
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Browser"
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1649.0
+offset_top = 723.0
+offset_right = 1783.0
+offset_bottom = 947.0
+
+[node name="Icon2" type="Button" parent="Control2"]
+custom_minimum_size = Vector2(32, 32)
+layout_direction = 1
+offset_left = -4.0
+offset_top = 2.0
+offset_right = 132.0
+offset_bottom = 138.0
+icon = ExtResource("1_hvwv0")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Email" type="RichTextLabel" parent="Control2"]
+offset_left = 32.0
+offset_top = 132.0
+offset_right = 98.0
+offset_bottom = 166.0
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Email"
